@@ -1,0 +1,10 @@
+version: '3'
+services:
+  react:
+    build: .
+    ports:
+     - "80:8080"
+    volumes: 
+     - .:/code
+  # redis:
+  #   image: "redis:alpine"
