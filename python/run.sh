@@ -1,0 +1,1 @@
+docker run --rm -p 80:5000 my-py

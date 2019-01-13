@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>mongodb node</title>
+</head>
+<body>
+  my app item
+
+  <form action="/add/item" method="post">
+    <label for="name">name
+      <input name="name" type="text">
+    </label>
+    <input value="add" type="submit">
+  </form>
+  <h4>Items:</h4>
+  <ul>
+    <% Items.forEach((item)=>{ %>
+      <li><%item.name%> </li>
+    <%}) %>
+  </ul>
+</body>
+</html>
