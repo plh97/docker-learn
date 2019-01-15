@@ -19,6 +19,10 @@ docker exec $(docker container --name=tf) # 进入容器内部开发
 - git
 
 环境是docker的环境,当前目录与docker容器里面共享同一个目录
+![image](https://user-images.githubusercontent.com/14355994/51209044-40fb5c00-194a-11e9-866a-3006524a2dc6.png)
+
+
+
 
 
 ### loss 机器学习-损失函数
