@@ -1,0 +1,1 @@
+docker run -it --rm -d -v $(pwd):/root/tensorflow pengliheng/tf

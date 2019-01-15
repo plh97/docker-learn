@@ -1,0 +1,10 @@
+version: '3'
+services:
+  tf:
+    build: .
+    command: python index.py migrate
+    ports:
+     - "80:3001"
+
+    volumes: 
+     - .:/tensorflow
