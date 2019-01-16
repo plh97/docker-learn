@@ -10,7 +10,7 @@
 - [x] egg.js                    开发体验    慢
 - [x] create-react-app          开发体验    极速
 - [x] vue-cli                   开发体验    快
-- [x] tensorflow                地址:       docker pull pengliheng/tf
+- [x] tensorflow                地址:       [docker pull pengliheng/tf](https://cloud.docker.com/repository/docker/pengliheng/tf/general)
 
 
 
