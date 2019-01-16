@@ -26,7 +26,7 @@ docker exec $(docker container --name=tf) # 进入容器内部开发
 
 ### TODOLIST
 - [ ] 验证码识别
-- 生成100个验证码图片 assets/images
+  生成100个验证码图片 assets/images
 
 
 
