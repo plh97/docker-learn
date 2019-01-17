@@ -14,7 +14,15 @@
 - [x] tensorflow                地址:       [docker pull pengliheng/tf](https://cloud.docker.com/repository/docker/pengliheng/tf/general)
 
 
+### `docker build --tag=pengliheng/<my project>`  开发环境部署
+```bash
+docker build --tag=pengliheng/<my project>                                              # 新建docker image
+docker run --rm -it -d -v $(pwd):/code -w -p 80:80 /code pengliheng/<my project>        # 在image层下新建一个container
+docker ps -a -s                                                                         # 查询container id
+docker attach <container id>                                                            # hack 进入container 进行开发
+```
 
 
-### `docker-composer up`部署
+
+### `docker-composer up`  生产环境部署
 需要删除image才能修改之前提交的参数,,,,或许重新build一次可以改善问题...
