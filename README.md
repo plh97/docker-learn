@@ -16,10 +16,10 @@
 
 ### `docker build --tag=<my project>`  开发环境部署
 ```bash
-docker build --tag=pengliheng/<my project>                                            # 新建docker image
-docker run --rm -it -d -v $(pwd):/code -w -p 80:80 /code pengliheng/<my project>      # 在image层下新建一个container
-docker ps -a -s                                                                       # 查询container id
-docker attach <container id>                                                          # hack 进入container 进行开发
+docker build --tag=pengliheng/<my project>                                        # 新建docker image
+docker run --rm -it -d -v $(pwd):/code -w -p 80:80 /code pengliheng/<my project>  # 在image层下新建一个container
+docker ps -a -s                                                                   # 查询container id
+docker attach <container id>                                                      # hack 进入container 进行开发
 ```
 
 
