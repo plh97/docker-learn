@@ -9,6 +9,7 @@
 - [x] tomcat    
 - [x] egg.js                    开发体验    慢
 - [x] create-react-app          开发体验    极速
+- [x] golang                    开发体验    1.无法监听项目下文件变更，实现动态热更golang项目。2.可以规避的问题
 - [x] vue-cli                   开发体验    快
 - [x] tensorflow                地址:       [docker pull pengliheng/tf](https://cloud.docker.com/repository/docker/pengliheng/tf/general)
 
