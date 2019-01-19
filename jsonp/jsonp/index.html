@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+    <script>
+      function jsonp({callback,data,url}){
+        const script = document.createElement('script');
+        var dataUrl = url;
+        dataUrl += "?";
+        for(let key in data){
+          dataUrl+= key +"="+data[key]+"&";
+        }
+        dataUrl+= "callback=func";
+        script.src = dataUrl;
+        const func = 'func'
+        // 4.挂载回调函数
+        window[func] = function (data) {
+          callback(data);
+          document.body.removeChild(script);
+        }
+        document.body.appendChild(script);
+      }
+      jsonp({
+        url: "http://localhost/search",
+        data:{
+          a:1,
+          b:2,
+          c:2,
+        },
+        callback(data){
+          console.log(data);
+        }
+      });
+    </script>
+  
+</body>
+</html>

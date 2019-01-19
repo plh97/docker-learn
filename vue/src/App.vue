@@ -1,17 +1,31 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div>
+      <label for="name">
+        name
+        <input type="text" v-model="name">
+      </label>
+      <button @click="submitName()">add</button>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import {
+  db,
+  namesRef
+} from './firebase';
 export default {
   name: 'app',
-  components: {
-    HelloWorld
+  data(){
+    return {
+      name: 'pengliheng',
+    }
+  },
+  methods: {
+    submitName(){
+      namesRef.push({name: this.name, edit: false})
+    }
   }
 }
 </script>

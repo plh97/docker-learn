@@ -26,3 +26,4 @@ docker attach <container id>                                                    
 
 ### `docker-composer up`  生产环境部署
 需要删除image才能修改之前提交的参数,,,,或许重新build一次可以改善问题...
+

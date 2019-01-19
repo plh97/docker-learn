@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function onLoad() {
+      document.domain = 'localhost:5500';
+      var iframe =document.querySelector('iframe');
+      var iframeWindow = iframe.contentWindow; // 这里可以获取 iframe 里面 window 对象，但是几乎没用
+      var doc = iframeWindow.document; // 获取不到
+    }
+  </script>
+  <iframe onload="onLoad()" src="http://localhost:9999" frameborder="0"></iframe>
+
+</body>
+</html>
