@@ -1,0 +1,1 @@
+docker run --rm -d -it -p 80:80 -v $(pwd):/root/app my-nginx

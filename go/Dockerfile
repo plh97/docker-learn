@@ -1,10 +1,9 @@
-FROM golang:onbuild
-COPY . /code
-LABEL pengliheng "pengliheng111@gmail.com"
-WORKDIR /code
+FROM pengliheng/golang:latest
 
-RUN go install
+WORKDIR /go/src/github.com/Zach-Johnson/go-docker-hot-reload-example
 
+COPY . .
 
+RUN ["go", "get", "github.com/githubnemo/CompileDaemon"]
 
-CMD ["gin", "run" , "main.go"]
+ENTRYPOINT CompileDaemon -log-prefix=false -build="go build ./cmd/api/" -command="./api"

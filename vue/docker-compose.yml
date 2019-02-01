@@ -1,10 +1,9 @@
 version: '3'
 services:
-  react:
+  vue:
     build: .
     ports:
+     - "80:8081"
      - "80:8080"
     volumes: 
-     - .:/code
-  # redis:
-  #   image: "redis:alpine"
+     - .:/root/code

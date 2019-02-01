@@ -1,15 +1,14 @@
 import Vue from 'vue'
 import App from './App.vue'
-import './firebase.js'
+import './utils/firebase.js'
 import VueFire from 'vuefire'
+import router from './routers';
 
 Vue.use(VueFire)
 
 Vue.config.productionTip = false
 
 new Vue({
+  router,
   render: h => h(App),
-  beforeCreate: ()=>{
-    console.log('beforeCreate');
-  }
 }).$mount('#app')
