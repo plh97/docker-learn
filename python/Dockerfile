@@ -1,7 +1,16 @@
- FROM python
- ENV PYTHONUNBUFFERED 1
- RUN mkdir /code
- WORKDIR /code
- ADD requirements.txt /code/
- RUN pip install -r requirements.txt
- ADD . /code/
+FROM python:3
+#  ENV PYTHONUNBUFFERED 1
+# RUN mkdir /code
+COPY . /root/app
+
+WORKDIR /root/app
+
+
+
+
+# ADD requirement.txt /code/
+# RUN pip install -r requirement.txt
+# ADD . /code/
+
+
+# CMD [ "python" "test.py" ]

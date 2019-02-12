@@ -1,1 +1,4 @@
-docker run --rm -p 80:5000 my-py
+docker run \
+--rm -it \
+my-py:latest \
+python /root/app/test.py
